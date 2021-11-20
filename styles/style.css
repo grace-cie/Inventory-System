@@ -1,0 +1,240 @@
+       /*
+        DEMO STYLE
+    */
+
+    @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+    @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@700&display=swap');
+    body {
+        font-family: 'Public Sans', sans-serif;
+        background: #fafafa;
+        padding: 0;
+        margin: 0;
+    }
+
+    p {
+        font-family: 'Public Sans', sans-serif;
+        font-size: 1.1em;
+        font-weight: 300;
+        line-height: 1.7em;
+        color: #999;
+    }
+
+    a,
+    a:hover,
+    a:focus {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+    
+    .navbar {
+        background: #caebf2;
+        border: none;
+        position: fixed;
+        width: 100%;
+        height: 110px;
+        right: 1px;
+        top: 1px;
+    }
+    .navbar a {
+        color: #fff;
+        font-size: 23px;
+        font-family: 'Public Sans', sans-serif;
+        background: #ff3b3f;
+        padding: 20px 15px 20px 15px;
+        border-radius: 5px;
+        position: relative;
+        top: -3px;
+        left: 16px;
+    }
+    .navbar-btn {
+        box-shadow: none;
+        outline: none !important;
+        border: none;
+    }
+
+    .line {
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px dashed #ddd;
+        margin: 40px 0;
+    }
+
+    /* ---------------------------------------------------
+        SIDEBAR STYLE
+    ----------------------------------------------------- */
+
+    #sidebar {
+        width: 407px;
+        position: fixed;
+        top: 0;
+        left: -409px;
+        height: 100vh;
+        z-index: 999;
+        background: #caebf2;
+        color: #818181;
+        transition: all 0.3s;
+        overflow-y: scroll;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    #sidebar.active {
+        left: 0;
+    }
+
+    #dismiss {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        background: #7386D5;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    #dismiss:hover {
+        background: #fff;
+        color: #7386D5;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 998;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+    .overlay.active {
+        display: block;
+        opacity: 1;
+    }
+
+    #sidebar .sidebar-header {
+        padding: 20px;
+        background: #caebf2;
+    }
+
+    #sidebar ul.components {
+        padding: 20px 0;
+    }
+
+    #sidebar ul p {
+        color: #fff;
+        padding: 47px;
+    }
+
+    #sidebar ul li a {
+        padding: 17px;
+        font-size: 45px;
+        display: block;
+        margin-left: 90px;
+    }
+
+    #sidebar ul li.active>a,
+    a[aria-expanded="true"] {
+        color: #fff;
+        background: #6d7fcc;
+    }
+    
+    a[data-toggle="collapse"] {
+        position: relative;
+    }
+
+    .dropdown-toggle::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+    }
+
+    ul ul a {
+        font-size: 0.9em !important;
+        padding-left: 30px !important;
+        background: #6d7fcc;
+    }
+
+    ul.CTAs {
+        padding: 20px;
+    }
+
+    ul.CTAs a {
+        text-align: center;
+        font-size: 0.9em !important;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+    a.download {
+        background: #fff;
+        color: #7386D5;
+    }
+
+    a.article,
+    a.article:hover {
+        background: #6d7fcc !important;
+        color: #fff !important;
+    }
+
+    /* ---------------------------------------------------
+        CONTENT STYLE
+    ----------------------------------------------------- */
+
+    #content {
+        width: 100%;
+        min-height: 100vh;
+        transition: all 0.3s;
+        position: absolute;
+        top: 112px;
+        right: 0;
+        z-index: -1;
+    }
+
+    /*mypage*/
+
+    .tit-holder{
+        width: 100%;
+        height: 79px;
+        font-size: 47px;
+        font-family: 'Public Sans', sans-serif;
+        background: #96cbbb;
+        color: #f1f1f1;
+        position: fixed;
+        top: 110px;
+        z-index: 1;
+    }
+    .srch-nav{
+        position: relative;
+        right: -59px;
+        height: 53px;
+        font-size: 26px;
+        border: none;
+        background: none;
+        border-bottom: solid 3px#ffffff;
+        font-family: 'Public Sans', sans-serif;
+        top: -2px;
+        outline: none;
+        color: #fff;
+    }
+    .add {
+        position: absolute;
+        right: 29px;
+        color: #fff;
+        font-size: 90px;
+        top: -27px;
+    }
+    input[name="srch"]::placeholder {
+        color: #ffffff;
+    }
+
+    
+    
