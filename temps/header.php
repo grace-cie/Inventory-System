@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Inventory System</title>
+    <script type="text/javascript" src="js/Chart.min.js"></script> 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="styles/style.css">

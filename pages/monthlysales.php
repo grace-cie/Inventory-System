@@ -1,8 +1,7 @@
+
 <div id="content">
      <section class="tit-holder">
-          <div class="srch-holder" style="position: absolute; left: -39px;">
-               <input type="text" name="srch" id="srch" class="srch-nav" placeholder="Search">
-          </div>
+          <a href="pages/monthlychrt.php" style="position: relative; left: 646px; top: 0px;"> <img src="img/icons/stats.png" alt=""> </a>
      </section>
      <?php
         //$ssql = "SELECT min(id) as idm, date_sold, sum(total) as totd FROM trans group by date_sold";
@@ -28,27 +27,3 @@
      </table>
      </div>
 </div>
-
-<script>
-     //search func
-     $(document).ready(function(){
-          $('#srch').keyup(function(){
-               search_table($(this).val());
-          });
-          function search_table(value){
-               $('#ms-table tr').each(function(){
-                    var found = 'false';
-                    $(this).each(function(){
-                         if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >=0 ) {
-                              found = 'true'
-                         }
-                    });
-                    if(found == 'true'){
-                         $(this).show();
-                    } else {
-                         $(this).hide();
-                    }
-               });
-          }
-     });
-</script>
