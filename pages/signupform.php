@@ -86,7 +86,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 <body>
     <div class="wrapper-main">
             <a href="../mainpg.php?page=users"><img name="back-btn" src="../img/icons/close-btn.png" alt="Back"></a>
-            <form class="addform" action="signup.php" method="POST">
+            <form class="addform" action="../includes/signup.php" method="POST">
             <h2>Add User</h2>
                 <input type="text" name="name" placeholder="Name" >
                 <input class="inpt-usr-n" type="text" name="uname" placeholder="UserName">

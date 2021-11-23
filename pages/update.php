@@ -44,7 +44,7 @@ require "../includes/dbh.php";
       $query = "UPDATE productss SET prod_name = '{$pname}' , prod_retail = '{$pretprice}' , prod_stock = '{$pstck}' , prod_whlsale = '{$pwhlprice}' , prod_qnt = '{$pqnt}' WHERE id = $prodid";
       $update_prod = mysqli_query($conn, $query);
       //echo "<script type='text/javascript'>alert('User data updated successfully!')</script>";
-      header("Location: home.php?update=sucess");
+      header("Location: ../mainpg.php?pages=?update=sucess");
       exit();
     }             
 ?>
@@ -119,7 +119,7 @@ label {
         <label for="pwhlprice-inpt">Wholesale Price</label><br>
         <input type="number" name="pwhlprice-inpt" step="any" value="<?php echo $pwhlprice  ?>"><br>
         <label for="pqnt-inpt">Quantity</label><br>
-        <input type="number" name="preqnt-inpt" step="any" value="<?php echo $pqnt  ?>"><br>
+        <input type="number" name="pqnt-inpt" step="any" value="<?php echo $pqnt  ?>"><br>
         <label for="pretprice-inpt">Retail Price</label><br>
         <input type="number" name="pretprice-inpt" step="any" value="<?php echo $pretprice  ?>"><br>
         <label for="pstck-inpt">Stocks</label><br>

@@ -6,6 +6,7 @@
           </div>
      </section>
      <table style="width: 100%;" id="prod-table">
+     <thead>
           <tr>
                <th>Roll</th>
                <th>Product</th> 
@@ -14,6 +15,7 @@
                <th>Total<img class="coin" src="img/icons/philippine-peso.png" style="right: -7px;"></th>
                <th colspan="2">&nbsp;Operations</th>
           </tr>
+     </thead>
      <?php
           //show table from database
           $sql = "SELECT * FROM `productss`";
@@ -26,15 +28,17 @@
 
                 // total
                ?>
-               <tr>
-                    <td class="pname-s"><?php echo $row['id']."."?></td>
-                    <td><?php echo $row['prod_name']?></td>
-                    <td><?php echo '<img class="coin" src="img/icons/philippine-peso.png">'.$row['prod_retail']?></td>
-                    <td><?php echo $row['prod_stock']."pcs"?></td>
-                    <td id="total"><?php echo $row['prod_retail'] * $row['prod_stock']?></td>
-                    <td class='btn-wrapper-ed'><?php echo " <a class='oprt-btn' href='pages/update.php?edit&prod_id={$id}'>Update</a>";?></td>
-                    <!--<td class='btn-wrapper-del'><?php# echo " <a class='oprt-btn-dl' href='#?delete={$id}'>Details</a>";?></td>-->
-               </tr>
+               <tbody id="filt">
+                    <tr>
+                         <td class="pname-s"><?php echo $row['id']."."?></td>
+                         <td><?php echo $row['prod_name']?></td>
+                         <td><?php echo '<img class="coin" src="img/icons/philippine-peso.png">'.$row['prod_retail']?></td>
+                         <td><?php echo $row['prod_stock']."pcs"?></td>
+                         <td id="total"><?php echo $row['prod_retail'] * $row['prod_stock']?></td>
+                         <td class='btn-wrapper-ed'><?php echo " <a class='oprt-btn' href='pages/update.php?edit&prod_id={$id}'>Update</a>";?></td>
+                         <!--<td class='btn-wrapper-del'><?php# echo " <a class='oprt-btn-dl' href='#?delete={$id}'>Details</a>";?></td>-->
+                    </tr>
+               </tbody>
                <?php
            }
      ?>
@@ -64,7 +68,7 @@
                search_table($(this).val());
           });
           function search_table(value){
-               $('#prod-table tr').each(function(){
+               $('#filt tr').each(function(){
                     var found = 'false';
                     $(this).each(function(){
                          if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >=0 ) {

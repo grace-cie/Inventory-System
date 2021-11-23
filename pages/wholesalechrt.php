@@ -1,3 +1,4 @@
+
 <div id="content">
      <section class="tit-holder">
           <div class="srch-holder" style="position: absolute; left: -39px;">
@@ -6,6 +7,7 @@
           </div>
      </section>
      <table style="width: 100%;" id="prod-table" style="position: relative top: 189px;">
+     <thead>
           <tr>
                <th>Roll</th>
                <th>Product</th>
@@ -14,6 +16,7 @@
                <th>Total<img class="coin" src="img/icons/philippine-peso.png" style="right: -7px;"></th>
                <th colspan="2">&nbsp;Operations</th>
           </tr>
+     </thead>     
      <?php
           //show table from database
           $sql = "SELECT * FROM `productss`";
@@ -23,16 +26,18 @@
                $pname = $row['prod_name'];        
                $pwhlprice = $row['prod_whlsale'];   //$pprice = $row['prod_price'];      
                $pqnt = $row['prod_qnt'];     //$pqnty = $row['prod_qnty'];
-               ?>
-               <tr>
-                    <td class="pname-s"><?php echo $row['id']."."?></td>
-                    <td><?php echo $row['prod_name']?></td>
-                    <td><?php echo '<img class="coin" src="img/icons/philippine-peso.png">'.$row['prod_whlsale']?></td>
-                    <td><?php echo $row['prod_qnt']?></td>
-                    <td id="total"><?php echo $row['prod_whlsale'] * $row['prod_qnt']?></td>
-                    <td class='btn-wrapper-ed'><?php echo " <a class='oprt-btn' href='pages/update.php?edit&prod_id={$id}'>Update</a>";?></td>
-                    <!--<td class='btn-wrapper-del'><?php# echo " <a class='oprt-btn-dl' href='#?delete={$id}'>Details</a>";?></td>-->
-               </tr>
+     ?>
+     <tbody id="filt">
+          <tr>
+               <td class="pname-s"><?php echo $row['id']."."?></td>
+               <td><?php echo $row['prod_name']?></td>
+               <td><?php echo '<img class="coin" src="img/icons/philippine-peso.png">'.$row['prod_whlsale']?></td>
+               <td><?php echo $row['prod_qnt']?></td>
+               <td id="total"><?php echo $row['prod_whlsale'] * $row['prod_qnt']?></td>
+               <td class='btn-wrapper-ed'><?php echo " <a class='oprt-btn' href='pages/update.php?edit&prod_id={$id}'>Update</a>";?></td>
+               <!--<td class='btn-wrapper-del'><?php# echo " <a class='oprt-btn-dl' href='#?delete={$id}'>Details</a>";?></td>-->
+          </tr>
+     </tbody>
                <?php
           }
      ?>
@@ -62,7 +67,7 @@
                search_table($(this).val());
           });
           function search_table(value){
-               $('#prod-table tr').each(function(){
+               $('#filt tr').each(function(){
                     var found = 'false';
                     $(this).each(function(){
                          if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >=0 ) {
@@ -77,5 +82,8 @@
                });
           }
      });
+</script>
+<script>
+     
 </script>
 

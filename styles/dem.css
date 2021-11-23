@@ -47,7 +47,7 @@ tbody:nth-child(even) tr:nth-child(odd) {
     background: #32639d;
     color: #fff;
 }
-tbody tr:nth-child(even) .btn-wrapper-ed {
+tbody:nth-child(even) tr:nth-child(odd) .btn-wrapper-ed {
     background-color: #1b4d89;
 }
 .coin {

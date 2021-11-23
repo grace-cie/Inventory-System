@@ -12,15 +12,19 @@
      ?>
      <div class="get_data">
      <table style="width: 100%;" id="prod-table">
+     <thead>
             <tr>
                 <th>Date Sold</th>
                 <th>Daily Total Solds</th>
             </tr>
+     </thead>
         <?php while ($row = $res->fetch_object()): ?>
+          <tbody id="filt">
             <tr>
                 <td id="date"><?php echo $row->daysold; ?></td>
                 <td><?php echo '<img class="coin" src="img/icons/philippine-peso.png">'.$row->totd; ?></td>
             </tr>
+          </tbody>
         <?php endwhile; ?>
      </table>
      </div>
@@ -33,7 +37,7 @@
                search_table($(this).val());
           });
           function search_table(value){
-               $('#ds-table tr').each(function(){
+               $('#filt tr').each(function(){
                     var found = 'false';
                     $(this).each(function(){
                          if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >=0 ) {

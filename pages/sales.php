@@ -6,6 +6,7 @@
         </center>
      </section>
      <table style="width: 100%;" id="prod-table">
+     <thead>
           <tr>
                <th>Roll</th>
                <th>Product Name</th>
@@ -13,6 +14,7 @@
                <th>Date</th>
                <th>Total</th>
           </tr>
+     </thead>
      <?php
           //show table from database
           $sql = "SELECT * FROM `trans`";
@@ -24,6 +26,7 @@
                $datesold = $row['date_sold'];
                $tot = $row['total'];  
                ?>
+               <tbody id="filt">
                <tr>
                     <td class="pname-s"><?php echo $row['id']."."?></td>
                     <td><?php echo $row['prod_name']?></td>
@@ -32,6 +35,7 @@
                     <td><?php echo '<img class="coin" src="img/icons/philippine-peso.png">'.$row['total']?></td>
                     
                </tr>
+               </tbody>
                <?php
           }
      ?>

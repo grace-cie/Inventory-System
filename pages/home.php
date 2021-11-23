@@ -7,6 +7,7 @@
                 
         </section>
         <table style="width: 100%;" id="prod-table">
+        <thead>
                 <tr>
                         <th>Roll</th>
                         <th>Product Name</th>
@@ -14,6 +15,7 @@
                         <th> <a href="?page=retail">Retail</a></th>
                         <th>Action</th>
                 </tr>
+        </thead>
         <?php
                 //show table from database
                 $sql = "SELECT * FROM `productss`";
@@ -24,6 +26,7 @@
                 $pwhlprice = $row['prod_whlsale'];        
                 $pretprice = $row['prod_retail'];  
                 ?>
+                <tbody id="filt">
                 <tr>
                         <td class="pname-s"><?php echo $row['id']."."?></td>
                         <td><?php echo $row['prod_name']?></td>
@@ -31,6 +34,7 @@
                         <td><?php echo '<img class="coin" src="img/icons/philippine-peso.png">'.$row['prod_retail']?></td>
                         <td class='btn-wrapper-ed'><?php echo " <a class='oprt-btn' href='pages/minicount.php?edit&prod_id={$id}'>Sold</a>";?></td>
                 </tr>
+                </tbody>
                 <?php
                 }
         ?>
@@ -43,7 +47,7 @@
                 search_table($(this).val());
                 });
                 function search_table(value){
-                $('#prod-table tr').each(function(){
+                $('#filt tr').each(function(){
                         var found = 'false';
                         $(this).each(function(){
                                 if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >=0 ) {

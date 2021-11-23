@@ -14,15 +14,19 @@
 
      <div class="get_data">
      <table style="width: 100%;" id="prod-table">
+     <thead>
             <tr>
                 <th>Month</th>
                 <th>Monthtly Solds</th>
             </tr>
+     </thead>
         <?php while ($row = $result->fetch_object()): ?>
+            <tbody id="filt">
             <tr>
                 <td id="date"><?php echo $row->mname; ?></td>
                 <td><?php echo '<img class="coin" src="img/icons/philippine-peso.png">'.$row->tot; ?></td>
             </tr>
+            </tbody>
         <?php endwhile; ?>
      </table>
      </div>
