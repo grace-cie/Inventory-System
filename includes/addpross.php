@@ -14,25 +14,25 @@ if (isset($_POST['addprod-submit'])){
     $prodretprice = $_POST['prod-price-ret']; //$prodprice
     $prodstck = $_POST['prod-stck']; //$prodqnty
     
-   
+
     #error handler
     if (empty($prodname) || empty($prodretprice)  || empty($prodstck) || empty($prodwhlprice) || empty($prodqnt)){
         header("Location: ../pages/addproducts.php?error=Empty fields&prods".$prodretprice.$prodwhlprice."&name".$prodname);
         exit();
     } else { #insert data in database
-        $sql = "SELECT id FROM productss WHERE id=?";
+        $sql = "SELECT prod_name FROM productss WHERE prod_name=?";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)){
             header("Location: ../pages/addproducts.php?error=sqlerror");
             exit();
         } else { //add data to database func
-            mysqli_stmt_bind_param($stmt, "s", $prodretprice); //
+            mysqli_stmt_bind_param($stmt, "s", $prodname); //
             mysqli_stmt_execute($stmt);
             mysqli_stmt_store_result($stmt);
 
             $resultCheck = mysqli_stmt_num_rows($stmt);
             if($resultCheck > 0){
-                header("Location: ../pages/addproducts.php?error=prodtaken&name=".$prodname);
+                header("Location: ../pages/addproducts.php?error=product already exist&name=".$prodname);
                 exit();
             } else { 
                 $sql = "INSERT INTO productss (prod_name, prod_retail, prod_stock, prod_whlsale, prod_qnt) VALUES (?, ?, ?, ?, ?)";

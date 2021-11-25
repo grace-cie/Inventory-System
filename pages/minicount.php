@@ -159,7 +159,7 @@ require "../includes/dbh.php";
         <label for="total">Total</label><br>
         <input type="text" name="total" id="total" placeholder="Total Retail" value="0" readonly><br>
         <label for="sold">Qnty of Sold</label><br>
-        <input type="number" name="sold" class="sold-inpt" id="sold" placeholder="Quantity">
+        <input type="number" name="sold" class="sold-inpt" id="sold" placeholder="Quantity" required>
         <input type="submit"  name="update" value="Sold">
     </form>
     <script>
