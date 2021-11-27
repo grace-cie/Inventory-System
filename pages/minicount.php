@@ -59,7 +59,7 @@ require "../includes/dbh.php";
 	}
   .main-container {
 		background: #caebf2;
-        height: 1020px;
+    height: 1020px;
 		width: 600px;
 		border-radius: 14px;
 		position: relative;

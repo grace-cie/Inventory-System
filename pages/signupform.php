@@ -11,6 +11,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add user</title>
+    <script type="text/javascript" src="../js/sweetalert2@11.js"></script>
+    <link rel="stylesheet" href="../styles/sweetalert.css">
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@700&display=swap');
@@ -19,11 +21,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 	}
     .wrapper-main {
         background: #caebf2;
-        height: 394px;
-        width: 435px;
-        border-radius: 14px;
+        height: 313px;
+        width: 354px;
+        border-radius: 5px;
         position: relative;
-        top: 332px;
+        top: 114px;
     }
     .addform {
         position: inherit;
@@ -37,13 +39,15 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 		text-align: center;
 	}
 	input {
-        height: 46px;
+        height: 38px;
         width: 69%;
-        font-size: 34px;
+        font-size: 21px;
         border: none;
         text-align: center;
         font-family: 'Public Sans', sans-serif;
-    }
+        margin-top: -1px;
+        outline: none;
+    }   
     .inpt-usr-n {
         position: relative;
         top: 7px;
@@ -53,32 +57,32 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         top: 15px;
     }
     button {
-		height: 60px;
-		width: 70%;
-		position: relative;
-		top: 24px;
-		border: none;
-		background: #ff3b3f;
-		color: #ffffff;
-		font-size: 36px;
-		font-family: 'Public Sans', sans-serif;
-	}
+        height: 40px;
+        width: 70%;
+        position: relative;
+        top: 24px;
+        border: none;
+        background: #ff3b3f;
+        color: #ffffff;
+        font-size: 20px;
+        font-family: 'Public Sans', sans-serif;
+    }
     .error {
         position: inherit;
-        top: 50px;
+        top: 47px;
         font-family: 'Public Sans', sans-serif;
         color: red;
-        font-size: 18px;
+        font-size: 13px;
     }
     h2 {
     	font-family: 'Public Sans', sans-serif;
-		font-size: 36px;
+		font-size: 31px;
     	color: #a9a9a9;
 	}
     img[name="back-btn"]{
         position: absolute;
-        height: 51px;
-        top: -60px;
+        height: 32px;
+        top: -36px;
         right: 1px;
     }
 </style>
@@ -93,6 +97,21 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <input class="inpt-pwd-n" type="password" name="pwd" placeholder="Password">
                 <button class="sbmt" type="submit" name="signup-submit">Sign Up!</button>
             </form>
+            <?php 
+            $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+            if (strpos($url, "signup=sucess") == true){
+                    echo "<script type='text/javascript'>
+                            Swal.fire({
+                            position: 'center',
+                            icon: 'success',
+                            title: 'User Added!',
+                            showConfirmButton: false,
+                            timer: 1500
+                            })
+                    </script>";
+            }
+            ?>
             <?php if (isset($_GET['error'])) { ?>
      		    <p class="error"><?php echo $_GET['error']; ?></p>
      	    <?php } ?>

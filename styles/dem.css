@@ -3,31 +3,30 @@
 #prod-table {
     border-collapse: collapse;
     position: absolute;
-    top: 77px;
+    top: 0px;
     text-align: center;
-    font-size: 25px;
+    font-size: 14px;
 }
 
 .tit-holder button {
     position: relative;
-    height: 45px;
+    height: 32px;
     border: none;
-    width: 343px;
+    width: 192px;
     border-radius: 5px;
-    font-size: 21px;
+    font-size: 12px;
     color: #fff;
     background: #ff3b3f;
     font-family: 'Public Sans', sans-serif;
-    top: -3px;
+    top: 7px;
 }
 .tot-val{
-    font-size: 21px;
+    font-size: 13px;
     position: absolute;
     width: 100%;
     margin-left: 102px;
-    margin-top: 42px;
+    margin-top: 26px;
     color: #2b6777;
-    text-shadow: 1px 1px 2px #fff;
 }
 th, td {
     border: -1px;
@@ -52,6 +51,7 @@ tbody:nth-child(even) tr:nth-child(odd) .btn-wrapper-ed {
 }
 .coin {
     position: relative;
-    top: -3px;
+    top: 0px;
     right: 6px;
+    height: 12px;
 }

@@ -18,7 +18,9 @@
         line-height: 1.7em;
         color: #999;
     }
-
+    a {
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+      }
     a,
     a:hover,
     a:focus {
@@ -32,20 +34,20 @@
         border: none;
         position: fixed;
         width: 100%;
-        height: 110px;
+        height: 67px;
         right: 1px;
         top: 1px;
     }
-    .navbar a {
+    .navbar a  {
         color: #fff;
-        font-size: 23px;
+        font-size: 13px;
         font-family: 'Public Sans', sans-serif;
         background: #ff3b3f;
-        padding: 20px 15px 20px 15px;
+        padding: 17px 15px 17px 15px;
         border-radius: 5px;
-        position: relative;
-        top: -3px;
-        left: 16px;
+        float: right;
+        margin-top: 9px;
+        margin-right: 6px;
     }
     .navbar-btn {
         box-shadow: none;
@@ -65,7 +67,7 @@
     ----------------------------------------------------- */
 
     #sidebar {
-        width: 407px;
+        width: 213px;
         position: fixed;
         top: 0;
         left: -409px;
@@ -133,9 +135,9 @@
 
     #sidebar ul li a {
         padding: 17px;
-        font-size: 45px;
+        font-size: 21px;
         display: block;
-        margin-left: 90px;
+        margin-left: 42px;
     }
 
     #sidebar ul li.active>a,
@@ -203,34 +205,33 @@
 
     .tit-holder{
         width: 100%;
-        height: 79px;
-        font-size: 47px;
+        height: 45px;
         font-family: 'Public Sans', sans-serif;
         background: #96cbbb;
         color: #f1f1f1;
         position: fixed;
-        top: 110px;
+        top: 68px;
         z-index: 1;
     }
     .srch-nav{
         position: relative;
-        right: -59px;
-        height: 53px;
-        font-size: 26px;
+        right: -50px;
+        height: 22px;
+        font-size: 15px;
         border: none;
         background: none;
-        border-bottom: solid 3px#ffffff;
+        border-bottom: solid 2px #FFFFFF;
         font-family: 'Public Sans', sans-serif;
-        top: -2px;
+        top: 11px;
         outline: none;
         color: #fff;
     }
-    .add {
-        position: absolute;
-        right: 29px;
+    .add  {
         color: #fff;
-        font-size: 90px;
-        top: -27px;
+        font-size: 50px;
+        float: right;
+        margin-top: -3px;
+        margin-right: 16px;
     }
     input[name="srch"]::placeholder {
         color: #ffffff;

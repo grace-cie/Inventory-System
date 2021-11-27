@@ -1,4 +1,4 @@
-    <head>
+<head>
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script> 
         <script type="text/javascript" src="../js/Chart.min.js"></script>
@@ -15,7 +15,7 @@
       }
       #LineChart{
          width: 100%;
-         height: 807px;
+         height: 640px;
          position: absolute;
          top: 0px;
          left: 0px;
@@ -27,6 +27,9 @@
         text-align: center;
         font-size: 25px;
         left: 0px;
+    }
+    table {
+        display: none;
     }
         th, td {
         border: -1px;
@@ -53,13 +56,27 @@
         top: -3px;
         right: 6px;
     }
+    .bck{
+        text-decoration: none;
+        background: #32639d;
+        color: #fff;
+        padding: 6px 24px 6px 24px;
+        position: relative;
+        bottom: -719px;
+        border-radius: 5px;
+    }
 </style> 
       <canvas id="LineChart"></canvas>
       <?php
+        //$host= "sql302.epizy.com";
+        //$username= "epiz_30186562";
+        //$password = "WX6myy2ZDW";
+        
+        //$db_name = "epiz_30186562_cpsystem";
         $host= "localhost";
         $username= "root";
         $password = "";
-        
+
         $db_name = "cpsystem";
         
         $conn = mysqli_connect($host, $username, $password, $db_name);
@@ -88,6 +105,7 @@
         <?php endwhile; ?>
         </tbody>
      </table>
+     <center><a class="bck" href="../mainpg.php?page=monthly" style="">Back</a></center>
      
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script>
 <script type="text/javascript" src="js/Chart.min.js"></script>      

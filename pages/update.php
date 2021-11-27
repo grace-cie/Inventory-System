@@ -43,7 +43,6 @@ require "../includes/dbh.php";
       // SQL query to update the data in user table where the id = $userid 
       $query = "UPDATE productss SET prod_name = '{$pname}' , prod_retail = '{$pretprice}' , prod_stock = '{$pstck}' , prod_whlsale = '{$pwhlprice}' , prod_qnt = '{$pqnt}' WHERE id = $prodid";
       $update_prod = mysqli_query($conn, $query);
-      //echo "<script type='text/javascript'>alert('User data updated successfully!')</script>";
       header("Location: ../mainpg.php?pages=?update=sucess");
       exit();
     }             
@@ -52,13 +51,14 @@ require "../includes/dbh.php";
   <title>Update Product</title>
 </head>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@700&display=swap');
    body{
 		background: #f1f1f1;
 	}
   .main-container {
 		background: #caebf2;
-        height: 910px;
-		width: 600px;
+    height: 910px;
+		width: 838px;
 		border-radius: 14px;
 		position: relative;
 		top: 336px;
@@ -77,7 +77,7 @@ require "../includes/dbh.php";
 		text-align: center;
 	}
 	input {
-		height: 70px;
+		height: 77px;
 		width: 69%;
 		font-size: 41px;
 		border: none;

@@ -39,6 +39,31 @@
                 }
         ?>
         </table>
+        <?php 
+                $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+                if (strpos($url, "update=sucess") == true){
+                        echo "<script type='text/javascript'>
+                                Swal.fire({
+                                position: 'center',
+                                icon: 'success',
+                                title: 'Product updated Succesfully!',
+                                showConfirmButton: false,
+                                timer: 1500
+                                })
+                        </script>";
+                } elseif (strpos($url, "sold=sucess") == true){
+                        echo "<script type='text/javascript'>
+                                Swal.fire({
+                                position: 'center',
+                                icon: 'success',
+                                title: 'Product Sold!',
+                                showConfirmButton: false,
+                                timer: 1500
+                                })
+                        </script>";
+                }
+        ?>
         </body>
         <script>
         //search func

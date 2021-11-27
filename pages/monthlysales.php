@@ -1,7 +1,7 @@
 
 <div id="content">
      <section class="tit-holder">
-          <a href="pages/monthlychrt.php" style="position: relative; left: 646px; top: 0px;"> <img src="img/icons/stats.png" alt=""> </a>
+          <a href="pages/monthlychrt.php" style="float: right; margin-top: 6px; margin-right: 6px;"> <img style="height: 34px;" src="img/icons/stats.png" alt="chart"> </a>
      </section>
      <?php
         //$ssql = "SELECT min(id) as idm, date_sold, sum(total) as totd FROM trans group by date_sold";

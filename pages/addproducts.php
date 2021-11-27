@@ -11,7 +11,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add Products</title>
+    <script type="text/javascript" src="../js/sweetalert2@11.js"></script>
+    <link rel="stylesheet" href="../styles/sweetalert.css">
 </head>
 <style>
     body {
@@ -23,11 +25,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@700&display=swap');
     .wrapper-main {
         background: #caebf2;
-        height: 517px;
-        width: 435px;
-        border-radius: 14px;
+        height: 434px;
+        width: 354px;
+        border-radius: 4px;
         position: relative;
-        top: 216px;
+        top: 114px;
     }
     input[name="prod-name"]::placeholder {        
 		text-align: center;
@@ -37,18 +39,18 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 		text-align: center;
 	}
 	input {
-        height: 54px;
+        height: 42px;
         width: 69%;
-        font-size: 34px;
+        font-size: 19px;
         border: none;
         text-align: center;
         font-family: 'Public Sans', sans-serif;
-        margin-top: 7px;
+        margin-top: 6px;
     }
     h2 {
         padding-top: 36px;
     	font-family: 'Public Sans', sans-serif;
-		font-size: 36px;
+		font-size: 24px;
     	color: #2b6777;
 	}
     input[name="prod-price"]{
@@ -68,8 +70,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     }
     img[name="back-btn"]{
         position: absolute;
-        height: 51px;
-        top: -60px;
+        height: 32px;
+        top: -36px;
         right: 1px;
     }
 </style>
@@ -88,8 +90,23 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     <br>
                     <input type="submit" name="addprod-submit" value="Add">
             </form>
+            <?php 
+                $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+                if (strpos($url, "addproduct=sucess") == true){
+                        echo "<script type='text/javascript'>
+                                Swal.fire({
+                                position: 'center',
+                                icon: 'success',
+                                title: 'Product Added!',
+                                showConfirmButton: false,
+                                timer: 1500
+                                })
+                        </script>";
+                }
+            ?>
             <?php if (isset($_GET['error'])) { ?>
-     		    <p class="error"><?php echo $_GET['error']; ?></p>
+     		    <p class="error" style="color: red;"><?php echo $_GET['error']; ?></p>
      	    <?php } ?>
     </div>
 </body>
