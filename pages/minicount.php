@@ -54,6 +54,7 @@ require "../includes/dbh.php";
   <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
 </head>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@700&display=swap');
    body{
 		background: #f1f1f1;
 	}
@@ -159,7 +160,7 @@ require "../includes/dbh.php";
         <label for="total">Total</label><br>
         <input type="text" name="total" id="total" placeholder="Total Retail" value="0" readonly><br>
         <label for="sold">Qnty of Sold</label><br>
-        <input type="number" name="sold" class="sold-inpt" id="sold" placeholder="Quantity" required>
+        <input type="number" name="sold" class="sold-inpt" id="sold" placeholder="Quantity" min="1" max="<?php echo $pstck ?>" required>
         <input type="submit"  name="update" value="Sold">
     </form>
     <script>

@@ -47,7 +47,7 @@
                                 Swal.fire({
                                 position: 'center',
                                 icon: 'success',
-                                title: 'Product updated Succesfully!',
+                                title: 'Product Updated!',
                                 showConfirmButton: false,
                                 timer: 1500
                                 })

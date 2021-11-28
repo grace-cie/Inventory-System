@@ -27,7 +27,7 @@
                     </img>
                 </li>
             </ul>
-            <a href="https://www.facebook.com/yamo.rey" target="_blank"><img src="img/icons/teamlogo.png" style="height: 106px; position: relative; top: 350px;" alt=""></a>
+            <a href="https://www.facebook.com/yamo.rey" target="_blank"><img src="img/icons/teamlogo.png" style="height: 106px; position: relative; top: 312px;" alt=""></a>
         </nav>
         <nav class="navbar">
             <div class="container-fluid">

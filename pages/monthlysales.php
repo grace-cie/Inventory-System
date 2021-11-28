@@ -17,7 +17,7 @@
      <thead>
             <tr>
                 <th>Month</th>
-                <th>Monthtly Solds</th>
+                <th>Monthly Solds</th>
             </tr>
      </thead>
         <?php while ($row = $result->fetch_object()): ?>
