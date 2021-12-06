@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
     $page = (isset($_GET['page']) &&  !empty($_GET['page']) ? $_GET['page'] : '');
