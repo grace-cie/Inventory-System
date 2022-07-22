@@ -16,8 +16,8 @@ require "../includes/dbh.php";
       $prodid = $_GET['prod_id']; 
     }
       // SQL query to select all the data from the table where id = $userid
-      $query="SELECT * FROM productss WHERE id = $prodid ";
-      $view_prods= mysqli_query($conn,$query);
+      $query = "SELECT * FROM productss WHERE id = $prodid ";
+      $view_prods = mysqli_query($conn,$query);
 
       while($row = mysqli_fetch_assoc($view_prods))
         {              
@@ -28,7 +28,7 @@ require "../includes/dbh.php";
         }
  
     //Processing form data when form is submitted
-    if(isset($_POST['update'])) 
+    if(isset($_POST['update']))   
     {
       $pname = $_POST['pname-inpt'];
       $pretprice = $_POST['pretprice-inpt'];

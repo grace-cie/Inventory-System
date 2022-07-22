@@ -1,3 +1,14 @@
+<?php 
+
+session_start();
+
+error_reporting(0);
+
+if (isset($_SESSION['user_name'])) {
+    header("Location: mainpg.php");
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,7 +70,7 @@
 		font-size: 25px;
 		font-family: arial;
 		color: red;
-		position: relative;
+		position: relative; 
     	top: 23px;
 	}
 </style>
@@ -71,7 +82,7 @@
      	<input type="text" name="uname" placeholder="User Name"><br>
      	<input class="pwdinput" type="password" name="password" placeholder="Password"><br>
      	<center><button type="submit">Login</button></center>
-		 <?php if (isset($_GET['error'])) { ?>
+		<?php if (isset($_GET['error'])) { ?>
      		<p class="error"><?php echo $_GET['error']; ?></p>
      	<?php } ?>
      </form>

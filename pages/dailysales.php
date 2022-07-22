@@ -1,7 +1,7 @@
 <div id="content">
      <section class="tit-holder">
-          <div class="srch-holder" style="position: absolute; left: -39px;">
-               <input type="text" name="srch" id="srch" class="srch-nav" placeholder="Search">
+          <div class="srch-holder" style="position: absolute; left: -42px;">
+               <input type="text" name="srch" id="srch" class="srch-nav" placeholder="Search Date..." onfocus="(this.type='date')" onblur="(this.type='text')"> 
           </div>
      </section>
      <?php
@@ -32,6 +32,7 @@
 
 <script>
      //search func
+     /*
      $(document).ready(function(){
           $('#srch').keyup(function(){
                search_table($(this).val());
@@ -52,4 +53,14 @@
                });
           }
      });
+     */
+$(document).ready(function(){
+  $("#srch").on("change", function() {
+    let value = $(this).val().toLowerCase();
+    console.log(value)
+    $("#filt tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
 </script>

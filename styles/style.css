@@ -217,11 +217,9 @@
         position: relative;
         right: -50px;
         height: 22px;
-        font-size: 15px;
         border: none;
         background: none;
         border-bottom: solid 2px #FFFFFF;
-        font-family: 'Public Sans', sans-serif;
         top: 11px;
         outline: none;
         color: #fff;
@@ -235,7 +233,24 @@
     }
     input[name="srch"]::placeholder {
         color: #ffffff;
+        font-size: 15px;
+        font-family: 'Public Sans', sans-serif;
     }
-
-    
-    
+    .filter-btn {
+        border: none;
+        width: 60px;
+        height: 22px;
+        position: relative;
+        top: 14px;
+        left: 58px;
+        background: #52ab98;
+        color: #fff;
+        font-family: 'Public Sans', sans-serif;
+        border-radius: 4px;
+        font-size: 10px;
+    }
+    .date-holder{
+        position: absolute;
+        top: 12px;
+        left: 13px;
+    }

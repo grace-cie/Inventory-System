@@ -16,13 +16,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <link rel="stylesheet" href="../styles/sweetalert.css">
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@700&display=swap');
     body {
         padding: 0;
         margin: 0;
         text-decoration: none;
         list-style: none;
     }
-    @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@700&display=swap');
     .wrapper-main {
         background: #caebf2;
         height: 434px;
